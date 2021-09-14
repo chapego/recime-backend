@@ -15,5 +15,5 @@ class RecipeIngredients(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, index=True, default=uuid.uuid4)
     recipe_id = Column(UUID, ForeignKey("recipe.id"))
-    ingredient_id = Column(UUID, ForeignKey("ingredient.id"))
+    ingredient_id = Column(UUID, ForeignKey("ingredients.id"))
     amount = Column(Float)
